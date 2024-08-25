@@ -31,7 +31,9 @@ jobs:
           node-version: '18.15.0'
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          export ELECTRON_MIRROR="https://npm.taobao.org/mirrors/electron/" # or another mirror if you have one
+          npm install
 
       - name: Get version and name from package.json
         id: get_version_name
