@@ -32,7 +32,6 @@ jobs:
 
       - name: Set npm rebuild to true
         run: |
-          echo "Setting npm_config_rebuild to true"
           export npm_config_rebuild=true
 
       - name: Install Dependencies
