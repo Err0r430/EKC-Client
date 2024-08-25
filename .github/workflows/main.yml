@@ -30,6 +30,11 @@ jobs:
         with:
           node-version: '18.x'
 
+      - name: Set npm rebuild to true
+        run: |
+          echo "Setting npm_config_rebuild to true"
+          export npm_config_rebuild=true
+
       - name: Install Dependencies
         run: npm install
 
